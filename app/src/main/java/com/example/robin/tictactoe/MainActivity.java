@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                         TileText.setText("X");
                         column = i % 3;
                         row = i / 3;
-
                         game.draw(row, column);
                     }
                     // restore O's
@@ -53,10 +52,11 @@ public class MainActivity extends AppCompatActivity {
                         TileText.setText("O");
                         column = i % 3;
                         row = i / 3;
-
                         game.draw(row, column);
                     }
                 }
+                // make sure game stays ended board is reloaded
+                game.won(row, column);
             }
         }
         // create new game
